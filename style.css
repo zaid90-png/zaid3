@@ -4,7 +4,7 @@ body {
   background: #f4f4f4;
 }
 
-
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 
-
+/* Main Layout */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@ a {
   gap: 20px;
 }
 
-
+/* Product List */
 #product-list {
   flex: 2;
   display: flex;
@@ -36,7 +36,7 @@ a {
   justify-content: center;
 }
 
-
+/* Product Card */
 .product {
   background: #fff;
   padding: 15px;
@@ -83,7 +83,7 @@ a {
   background: #555;
 }
 
-
+/* Cart Section */
 #cart-section {
   flex: 1;
   background: #fff;
@@ -94,6 +94,7 @@ a {
   height: fit-content;
 }
 
+/* Cart Items */
 #cart-items li {
   list-style: none;
   background: #f9f9f9;
@@ -103,9 +104,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-#cart-section button {
+#cart-section button,
+.remove-btn {
   background: #e74c3c;
   color: #fff;
   border: none;
@@ -116,7 +120,8 @@ a {
   transition: background 0.3s;
 }
 
-#cart-section button:hover {
+#cart-section button:hover,
+.remove-btn:hover {
   background: #c0392b;
 }
 
@@ -125,12 +130,12 @@ a {
   color: #333;
 }
 
-
+/* Hide Cart Section Initially */
 .hidden {
   display: none;
 }
 
-
+/* Recommendations */
 #recommendations {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +144,7 @@ a {
   justify-content: center;
 }
 
-
+/* ✅ Responsive Mobile Layout */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -149,13 +154,28 @@ a {
     width: 100%;
   }
 
+  .product button {
+    font-size: 16px;
+  }
+
   #cart-items li {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 
-  #cart-section button {
-    margin-top: 8px;
+  #cart-section button,
+  .remove-btn {
     width: 100%;
+    font-size: 16px;
+  }
+
+  #cart {
+    font-size: 16px;
+    width: fit-content;
+  }
+
+  h3 {
+    text-align: center;
   }
 }
